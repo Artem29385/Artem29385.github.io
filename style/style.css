@@ -351,6 +351,32 @@ body.no-scroll {
     width: 110px;
   }
 }
+
+
+@media (max-height: 500px) {
+  .header__wrapper__mainlogo__logo {
+    width: 70px;  
+    height: 50px;
+    background-size: 60px 50px;
+    margin-top: 8px;  
+  }
+  .header__wrapper__mainlogo {
+    height: 120px;  
+  }
+  .header__wrapper__img {
+      height: 80px;
+      grid-row-gap: 5px;
+  }
+
+  .header__img {
+    height: 35px;
+    width: 35px;
+  }
+
+  .header__wrapper__mainlogo__logo {
+    height: 70px;
+  }
+}
 @media (max-width: 680px) {
   .header {
     position: fixed;
@@ -1058,7 +1084,7 @@ body.no-scroll {
   color: #fff;
   z-index: 10;
   background-color: #ec0d00;
-  transform: translateX(-350px);
+  transform: translateX(-150px);
   opacity: 0;
   transition: opacity 1s ease, transform 1s ease;
 }
