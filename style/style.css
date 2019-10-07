@@ -1187,7 +1187,7 @@ body.no-scroll {
   }
 
   .lays__one {
-    height: 100%;
+    height: 100.1875%;
     transform: translateX(0px);
     position: relative;
     padding-top: 100%;
@@ -1226,11 +1226,11 @@ body.no-scroll {
 
   .lays__one__text p.mobile {
     display: block;
-    margin-top: 3.32rem;
+    margin-top: 3.26rem;
     font-size: 1.5rem;
-    line-height: 2.1rem;
+    line-height: 2rem;
     width: 20rem;
-    margin-left: 4rem;
+    margin-left: 4.2rem;
   }
 
   .lays__one__text .button {
@@ -1384,7 +1384,7 @@ body.no-scroll {
   .map__two {
     width: 100%;
     background-size: 100% 100%;
-    border-top: 5px solid white;
+    border-top: 3px solid white;
     background: url("../img/map/mobile__map.png") no-repeat 50% 50%;
     background-size: cover;
     transform: translateX(0px);
