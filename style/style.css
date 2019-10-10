@@ -856,11 +856,11 @@ body.no-scroll {
   right: 0;
 }
 
-.text__wrap {
+.photos__wrap {
   position: relative;
   margin: 6.1rem 0 0 2.19rem;
 }
-.text__wrap:after {
+.photos__wrap:after {
   content: "";
   position: absolute;
   background-image: url("../img/block2/social.jpg");
@@ -873,14 +873,14 @@ body.no-scroll {
   height: 4.89rem;
 }
 
-.text__wrap h2 {
+.photos__wrap h2 {
   font-family: GothamPro-Bold;
   color: #000;
   font-size: 0.96rem;
   line-height: 1.33rem;
 }
 
-.text__wrap h2.photos__leto {
+.photos__wrap h2.photos__leto {
   color: #f73934;
   font-size: 1rem;
   letter-spacing: 0.018rem;
@@ -928,7 +928,7 @@ body.no-scroll {
   opacity: 0.1;
 }
 
-.text__wrap .button {
+.photos__wrap .button {
   width: 5.5rem;
   height: 1.58rem;
   display: grid;
@@ -946,7 +946,7 @@ body.no-scroll {
   text-transform: uppercase;
   margin: 0.8rem 0 0 -0.2rem;
 }
-.text__wrap .button:before {
+.photos__wrap .button:before {
   content: "";
   position: absolute;
   opacity: 0;
@@ -960,7 +960,7 @@ body.no-scroll {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-.text__wrap .button:hover:before {
+.photos__wrap .button:hover:before {
   opacity: 0.1;
 }
 
@@ -973,7 +973,7 @@ body.no-scroll {
   padding-top: 100%;
 }
 
-.photos__decorator--container {
+.photos__container {
   position: absolute;
   left: 0;
   top: 0;
@@ -993,7 +993,7 @@ body.no-scroll {
 }
 
 @media (max-width: 1401px) {
-  .photos__decorator--container {
+  .photos__container {
     padding: 0.7rem;
   }
 }
@@ -1015,21 +1015,21 @@ body.no-scroll {
     background-size: cover;
   }
 
-  .text__wrap {
+  .photos__wrap {
     margin: 18.8rem 0 0 4.4rem;
   }
-  .text__wrap h2 {
+  .photos__wrap h2 {
     font-size: 2.55rem;
     line-height: 3.45rem;
   }
-  .text__wrap h2.photos__leto {
+  .photos__wrap h2.photos__leto {
     font-size: 2.6rem;
     padding: 0 0.7rem;
     margin-left: -0.58rem;
     letter-spacing: -0.3px;
     color: #d62b2b;
   }
-  .text__wrap .button {
+  .photos__wrap .button {
     position: relative;
     bottom: 3.6rem;
     margin: 0 0 0 50%;
@@ -1040,7 +1040,7 @@ body.no-scroll {
     line-height: 3.9rem;
     background-color: rgba(168, 5, 0, 0.1);
   }
-  .text__wrap:after {
+  .photos__wrap:after {
     width: 17rem;
     height: 17rem;
     top: -15.4rem;
@@ -1049,12 +1049,12 @@ body.no-scroll {
     background-size: contain;
   }
 
-  .photos__decorator--container {
+  .photos__container {
     padding: 15px;
     grid-gap: 3px;
   }
 
-  .text__wrap .button:hover:before {
+  .photos__wrap .button:hover:before {
     opacity: 0;
   }
 }
@@ -1067,7 +1067,7 @@ body.no-scroll {
   transform: scale(1.25);
 }
 
-.lays__one-wrap {
+.lays__wrap {
   display: block;
 }
 
@@ -1177,7 +1177,7 @@ body.no-scroll {
     transform: scale(1);
   }
 
-  .lays__one-wrap {
+  .lays__wrap {
     position: absolute;
     top: 0;
     left: 0;
