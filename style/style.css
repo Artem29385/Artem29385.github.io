@@ -631,7 +631,7 @@ body.no-scroll {
   height: 100%;
 }
 
-.content__wrapper {
+.intro__wrap {
   width: 3rem;
   height: 3rem;
   margin: 0 auto;
@@ -778,7 +778,7 @@ body.no-scroll {
     width: 9.7rem;
   }
 
-  .content__wrapper {
+  .intro__wrap {
     width: 74px;
     height: 74px;
   }
