@@ -12,10 +12,6 @@ let text = document.querySelectorAll('.intro__icon__text');
 
 function closeMenu() {
     burger.classList.toggle('active');
-    console.log(burger.firstElementChild.getBoundingClientRect().top);
-    console.log(burger.firstElementChild.getBoundingClientRect().right);
-    console.log(burger.firstElementChild.getBoundingClientRect().bottom);
-    console.log(burger.firstElementChild.getBoundingClientRect().left);
     main.classList.toggle('active');
     header__block__img.classList.toggle('active');
     header__block__img.nextElementSibling.classList.toggle('active');
