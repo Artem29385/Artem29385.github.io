@@ -619,7 +619,7 @@ body.no-scroll {
 }
 
 /*
-.icon__bg:first-child {
+.intro__bg:first-child {
   transform: scale(0);
   transition: transform .5s linear 1s;
 }
@@ -638,7 +638,7 @@ body.no-scroll {
   overflow: hidden;
 }
 
-.icon__bg {
+.intro__bg {
   position: relative;
   background-color: white;
   width: 2.75rem;
@@ -783,7 +783,7 @@ body.no-scroll {
     height: 74px;
   }
 
-  .icon__bg {
+  .intro__bg {
     width: 64px;
     height: 64px;
   }
