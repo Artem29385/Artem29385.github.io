@@ -661,7 +661,7 @@ body.no-scroll {
   height: 2.75rem;
 }
 
-.imgbox__text {
+.intro__text {
   color: #45370a;
   font-family: GothamPro-Regular;
   font-weight: normal;
@@ -723,7 +723,7 @@ body.no-scroll {
     margin: 60px 0 0 65px;
   }
 
-  .imgbox__text {
+  .intro__text {
     padding-top: 10px;
     font-size: 16px;
     line-height: 22px;
@@ -737,6 +737,12 @@ body.no-scroll {
     line-height: 1.5rem;
   }
 }
+@media (max-width: 1150px) and (min-width: 1025px) {
+  .intro__text {
+    font-size: 14.4px;
+  }
+}
+
 @media (max-width: 1024px) and (min-width: 680px) {
   .intro__imgbox {
     margin: 46px 0 0 45px;
@@ -747,7 +753,7 @@ body.no-scroll {
     margin-left: 51px;
   }
 
-  .imgbox__text {
+  .intro__text {
     padding-top: 0.36rem;
     font-size: 0.5rem;
     line-height: 0.6rem;
@@ -794,7 +800,7 @@ body.no-scroll {
     margin-left: -32px;
   }
 
-  .imgbox__text {
+  .intro__text {
     padding-top: 2px;
     font-size: 13px;
     line-height: 14px;
