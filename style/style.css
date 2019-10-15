@@ -243,13 +243,9 @@ body.no-scroll {
       background-color: #ffda2d;
       transition: background-color 0.1s linear 0.2s;
    }
-
-   /*  .main.active {
-       grid-template-rows: 384px 1fr;
-     }*/
 }
 
-.header__menu-close {
+.header__menu__link-close {
    display: none;
 }
 
@@ -294,7 +290,7 @@ body.no-scroll {
    text-align: center;
 }
 
-.header__menu {
+.header__menu__link {
    width: 151px;
    margin-top: 0px;
    cursor: pointer;
@@ -311,11 +307,11 @@ body.no-scroll {
    transition: background 1s ease;
 }
 
-.header__menu:hover {
+.header__menu__link:hover {
    background: white;
 }
 
-.header__menu:before {
+.header__menu__link:before {
    content: "";
    position: absolute;
    top: 0;
@@ -334,7 +330,7 @@ body.no-scroll {
    transition: opacity 1s ease;
 }
 
-.header__menu:hover::before {
+.header__menu__link:hover::before {
    opacity: 1;
 }
 
@@ -355,7 +351,7 @@ body.no-scroll {
       width: 110px;
    }
 
-   .header__menu {
+   .header__menu__link {
       width: 110px;
    }
 }
@@ -373,7 +369,7 @@ body.no-scroll {
       height: 120px;
    }
 
-   .header__menu {
+   .header__menu__link {
       height: 80px;
       grid-row-gap: 5px;
    }
@@ -439,7 +435,7 @@ body.no-scroll {
       letter-spacing: 1px;
    }
 
-   .header__menu-close {
+   .header__menu__link-close {
       display: block;
       height: 60px;
       line-height: 60px;
@@ -455,7 +451,7 @@ body.no-scroll {
       text-align: center;
    }
 
-   .header__menu-close:before {
+   .header__menu__link-close:before {
       content: "";
       position: absolute;
       top: 0;
@@ -467,17 +463,17 @@ body.no-scroll {
       opacity: 1;
    }
 
-   .header__menu {
+   .header__menu__link {
       position: relative;
       height: 80px;
       width: 100%;
    }
 
-   .header__menu:hover {
+   .header__menu__link:hover {
       background: #f6f6f6;
    }
 
-   .header__menu:before {
+   .header__menu__link:before {
       content: "";
       position: absolute;
       top: 0;
@@ -564,50 +560,50 @@ body.no-scroll {
       transform: rotate(-45deg) translate3d(0, 0, 0);
    }
 
-   .header__menu.active:nth-child(1) {
+   .header__menu__link.active:nth-child(1) {
       transform: translateX(0px);
       opacity: 1;
       transition: all 0.5s ease;
    }
 
-   .header__menu.active:nth-child(2) {
+   .header__menu__link.active:nth-child(2) {
       transform: translateX(0px);
       opacity: 1;
       transition: all 0.5s ease;
    }
 
-   .header__menu.active:nth-child(3) {
+   .header__menu__link.active:nth-child(3) {
       transform: translateX(0px);
       opacity: 1;
       transition: all 0.5s ease;
    }
 
-   .header__menu:nth-child(1) {
+   .header__menu__link:nth-child(1) {
       transform: translateX(-50px);
       opacity: 0;
       transition: all 0.5s ease;
    }
 
-   .header__menu:nth-child(2) {
+   .header__menu__link:nth-child(2) {
       transform: translateX(50px);
       opacity: 0;
       transition: all 0.5s ease;
    }
 
-   .header__menu:nth-child(3) {
+   .header__menu__link:nth-child(3) {
       transform: translateX(-50px);
       opacity: 0;
       transition: all 0.5s ease;
    }
 
-   .header__menu-close {
+   .header__menu__link-close {
       transform: translateX(50px);
       opacity: 0;
       font-family: GothamPro-Regular;
       transition: all 0.5s ease;
    }
 
-   .header__menu-close.active {
+   .header__menu__link-close.active {
       transform: translateX(0);
       opacity: 1;
       transition: all 0.5s ease;
@@ -618,7 +614,6 @@ body.no-scroll {
    width: 100%;
    position: relative;
    padding-top: 46.33%;
-   /* 16:9 Aspect Ratio */
    background: url("../img/intro/1.jpg") no-repeat 50% 50%;
    background-size: cover;
    transform: translateX(350px);
@@ -641,12 +636,7 @@ body.no-scroll {
    margin: 46px 0 0 45px;
 }
 
-/*
-.intro__bg:first-child {
-  transform: scale(0);
-  transition: transform .5s linear 1s;
-}
-*/
+
 .intro__content {
    float: left;
    position: relative;
@@ -909,7 +899,7 @@ body.no-scroll {
    height: 4.89rem;
 }
 
-.photos__textstyle {
+.photos__text {
    font-family: GothamPro-Bold;
    color: #000;
    font-size: 0.96rem;

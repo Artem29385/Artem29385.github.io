@@ -1,14 +1,14 @@
-const burger = document.querySelector("[burger-btn-js]");
+const burger = document.querySelector("[mobile-menu-btn-js]");
 const headerBar = document.querySelector("[header-animate-js]");
-const headerMenu = document.querySelector('.header__menu');
+const headerMenu = document.querySelector('.header__menu__link');
 const close = document.querySelector('[header-btn-close]');
-const intro = document.querySelector('.intro');
-const blockGallery = document.querySelector('.photos');
-const blockAbout = document.querySelector('.lays__one');
-const map = document.querySelector('.map');
+const intro = document.querySelector('[left-animate-js]');
+const blockGallery = document.querySelector('[right-animate-js]');
+const blockAbout = document.querySelector('[animate-halfblock-lays-js]');
+const blockMap = document.querySelector('[animate-halfblock-map-js]');
 const header = document.querySelector('[data-js-dir]');
 
-function closeMenu() {
+const closeMenu = () => {
    burger.classList.toggle('active');
    headerBar.classList.toggle('active');
    headerMenu.classList.toggle('active');
@@ -57,12 +57,12 @@ if (document.body.offsetWidth > 640) {
             posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
             posTop = posTop + window.innerHeight - intro.getBoundingClientRect().top * 2;
             if (posTop > intro.getBoundingClientRect().top) {
-               document.querySelector('.intro').style.opacity = 1;
-               document.querySelector('.intro').style.transform = 'translate3d(0, 0, 0)';
+               intro.style.opacity = 1;
+               intro.style.transform = 'translate3d(0, 0, 0)';
             }
             if (posTop > blockGallery.getBoundingClientRect().top) {
-               document.querySelector('.photos').style.opacity = 1;
-               document.querySelector('.photos').style.transform = 'translate3d(0, 0, 0)';
+               blockGallery.style.opacity = 1;
+               blockGallery.style.transform = 'translate3d(0, 0, 0)';
             }
             if (posTop / 2 > blockAbout.getBoundingClientRect().top) {
                halfBlock = document.querySelector('.lays');
@@ -71,8 +71,8 @@ if (document.body.offsetWidth > 640) {
                halfBlock.firstElementChild.style.opacity = 1;
                halfBlock.lastElementChild.style.opacity = 1;
             }
-            if (posTop / 2 > map.getBoundingClientRect().bottom) {
-               halfBlock = document.querySelector('.map');
+            if (posTop / 2 > blockMap.getBoundingClientRect().bottom) {
+               halfBlock = blockMap;
                halfBlock.lastElementChild.style.transform = 'translate3d(0, 0, 0)';
                halfBlock.firstElementChild.style.transform = 'translate3d(0, 0, 0)';
                halfBlock.firstElementChild.style.opacity = 1;
@@ -83,6 +83,6 @@ if (document.body.offsetWidth > 640) {
       }
    );
 }
-document.querySelector('.intro').style.opacity = 1;
+intro.style.opacity = 1;
 document.querySelector('body').style.backgroundColor = 'white';
 
