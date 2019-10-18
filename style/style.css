@@ -1025,9 +1025,6 @@ body.no-scroll {
   transform: scale(1.25);
 }
 
-.lays__wrap {
-  display: block;
-}
 
 .mobile__p {
   display: none;
@@ -1129,14 +1126,7 @@ body.no-scroll {
     transform: scale(1);
   }
 
-  .lays__wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-  }
+
 
   .lays__one {
     transform: translateX(0px);
