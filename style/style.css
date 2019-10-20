@@ -177,6 +177,7 @@ body {
   background-color: #fff;
   font-size: 1rem;
   color: black;
+  font-family: GothamPro-Regular;
 }
 
 body.no-scroll {
@@ -278,7 +279,7 @@ body.no-scroll {
   margin-top: 28px;
   width: 97px;
   height: 85px;
-  background: url("../img/header/img1_lays.png") no-repeat 50% 50%;
+  background: url("../img/header/img1_lays.png") no-repeat center;
   background-size: 97px 85px;
 }
 
@@ -343,7 +344,6 @@ body.no-scroll {
   text-align: center;
   font-size: 14px;
   color: #555;
-  font-family: GothamPro-Regular;
 }
 
 @media (max-width: 1030px) {
@@ -543,80 +543,93 @@ body.no-scroll {
     transition: all 0.2s ease-in-out;
   }
 
+
+
   .header__wrapper.active {
     height: 384px;
     transition: none;
   }
 
-  .burger.active .burger__item1 {
+  .header__wrapper.active .burger__item1 {
     transform: rotate(45deg) translate3d(-1px, -1px, 0);
   }
 
-  .burger.active .burger__item2 {
-    transform: scale(0);
+  .header__wrapper.active .burger__item2 {
+  transform: scale(0);
   }
 
-  .burger.active .burger__item3 {
-    transform: rotate(-45deg) translate3d(0, 0, 0);
+  .header__wrapper.active .burger__item3 {
+  transform: rotate(-45deg) translate3d(0, 0, 0);
   }
 
-  .header__menu__link.active:nth-child(1) {
+  .header__wrapper.active  .header__menu__link:nth-child(1) {
     transform: translateX(0px);
     opacity: 1;
     transition: all 0.5s ease;
   }
 
-  .header__menu__link.active:nth-child(2) {
+    .header__wrapper.active  .header__menu__link:nth-child(2) {
     transform: translateX(0px);
     opacity: 1;
     transition: all 0.5s ease;
   }
 
-  .header__menu__link.active:nth-child(3) {
+
+  .header__wrapper.active  .header__menu__link:nth-child(3) {
     transform: translateX(0px);
     opacity: 1;
     transition: all 0.5s ease;
   }
 
-  .header__menu__link:nth-child(1) {
+  .header__wrapper  .header__menu__link:nth-child(1) {
     transform: translateX(-50px);
     opacity: 0;
     transition: all 0.5s ease;
   }
 
-  .header__menu__link:nth-child(2) {
+    .header__wrapper  .header__menu__link:nth-child(2) {
     transform: translateX(50px);
     opacity: 0;
     transition: all 0.5s ease;
   }
 
-  .header__menu__link:nth-child(3) {
+
+  .header__wrapper  .header__menu__link:nth-child(3) {
     transform: translateX(-50px);
     opacity: 0;
     transition: all 0.5s ease;
   }
 
-  .header__menu__link-close {
+  .header__wrapper .header__menu__link-close {
     transform: translateX(50px);
     opacity: 0;
-    font-family: GothamPro-Regular;
     transition: all 0.5s ease;
   }
 
-  .header__menu__link-close.active {
+  .header__wrapper.active .header__menu__link-close {
     transform: translateX(0);
     opacity: 1;
     transition: all 0.5s ease;
   }
+
+
+
+
 }
 
 .intro {
   height: 42vw;
-  background: url("../img/intro/1.jpg") no-repeat 50% 50%;
+  background: url("../img/intro/1.jpg") no-repeat center;
   background-size: cover;
   transform: translateX(350px);
   opacity: 0;
+  padding-top: 1px;
   transition: opacity 1s ease, transform 1s ease;
+}
+
+.intro[left-animate-js='active'] {
+  opacity: 1;
+  transform: translate3d(0,0,0);
 }
 
 .intro__wrapper {
@@ -652,16 +665,12 @@ body.no-scroll {
 }
 
 .image {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 100%;
+  height: 100%;
 }
 
 .intro__text {
   color: #45370a;
-  font-family: GothamPro-Regular;
   font-weight: normal;
   position: relative;
   text-align: center;
@@ -676,10 +685,13 @@ body.no-scroll {
   color: #f73934;
 }
 
+.h1__blocks {
+    margin-left: 51px;
+}
+
 .h1__text {
   font-family: GothamPro-Medium;
   color: #f73934;
-  margin-left: 51px;
   font-size: 2.18rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -709,7 +721,7 @@ body.no-scroll {
     margin: 70px 0 0 70px;
   }
 
-  .h1__text {
+  .h1__blocks {
     margin-left: 80px;
   }
 
@@ -729,7 +741,7 @@ body.no-scroll {
     line-height: 22px;
   }
 
-  .h1__text {
+  .h1__blocks {
     margin-left: 73px;
   }
 
@@ -750,7 +762,7 @@ body.no-scroll {
     margin-top: 1.64rem;
   }
 
-  .h1__text {
+  .h1__blocks {
     margin-left: 51px;
   }
 
@@ -804,7 +816,6 @@ body.no-scroll {
     font-size: 13px;
     line-height: 14px;
     letter-spacing: -0.1px;
-    font-family: GothamPro-Regular;
   }
 
   .h1__blocks {
@@ -839,15 +850,21 @@ body.no-scroll {
 
 .photos {
   display: grid;
+  height: 46.99vw;
   grid-template-columns: 1fr 1fr;
   transform: translateX(-350px);
   opacity: 0;
   transition: opacity 1s ease, transform 1s ease;
 }
 
+.photos[right-animate-js='active'] {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
 .photos__one {
-  height: 46.99vw;
-  background: url("../img/block2/left_img.jpg") no-repeat 50% 50%;
+  height: 100%;
+  background: url("../img/block2/left_img.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -882,12 +899,11 @@ body.no-scroll {
   color: #f73934;
   font-size: 1rem;
   letter-spacing: 0.018rem;
-  font-family: GothamPro-Regular;
   background-color: white;
   display: inline-block;
   padding: 0 0.18rem;
   margin-left: -0.18rem;
-  margin-top: 0.15rem;
+  padding-top: 0.15rem;
 }
 
 .button {
@@ -900,7 +916,6 @@ body.no-scroll {
   background-color: rgba(143, 12, 0, 0.1);
   font-size: 0.56rem;
   color: white;
-  font-family: GothamPro-Regular;
   letter-spacing: 1px;
   cursor: pointer;
   border: 1.5px solid white;
@@ -930,7 +945,7 @@ body.no-scroll {
 
 .photos__two {
   background-color: #fff;
-  height: 46.99vw;
+  height: 100%;
   padding: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -954,6 +969,7 @@ body.no-scroll {
     grid-template-columns: 1fr;
     transform: translateX(0px);
     opacity: 1;
+    height: 200vw;
   }
 
   .photos__one {
@@ -961,7 +977,7 @@ body.no-scroll {
     width: 100%;
     height: 100vw;
     /* 16:9 Aspect Ratio */
-    background: url("../img/block2/photo__mobile.png") no-repeat 50% 50%;
+    background: url("../img/block2/photo__mobile.png") no-repeat center;
     background-size: cover;
   }
 
@@ -1043,6 +1059,16 @@ body.no-scroll {
   transition: opacity 1s ease, transform 1s ease;
 }
 
+.lays[animate-halfblock-lays-js='active'] .lays__one {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.lays[animate-halfblock-lays-js='active'] .lays__two {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
 .lays__one:after {
   content: "";
   position: absolute;
@@ -1087,7 +1113,6 @@ body.no-scroll {
   margin-top: 1.82rem;
   font-size: 0.448rem;
   line-height: 0.6rem;
-  font-family: GothamPro-Regular;
   width: 11.72rem;
 }
 
@@ -1105,7 +1130,7 @@ body.no-scroll {
 }
 
 .lays__img {
-  background: url("../img/lays/ball.jpg") no-repeat 50% 50%;
+  background: url("../img/lays/ball.jpg") no-repeat center;
   background-size: cover;
   position: relative;
   height: 100%;
@@ -1131,7 +1156,7 @@ body.no-scroll {
   .lays__one {
     transform: translateX(0px);
     height: 100.1vw;
-    background: url("../img/lays/mobile__red.png") no-repeat 50% 50%;
+    background: url("../img/lays/mobile__red.png") no-repeat center;
     background-size: cover;
     opacity: 1;
   }
@@ -1167,7 +1192,6 @@ body.no-scroll {
   }
 
   .mobile__p {
-    font-family: GothamPro-Regular;
     display: block;
     margin-top: 3.26rem;
     font-size: 1.5rem;
@@ -1202,7 +1226,7 @@ body.no-scroll {
   }
 
   .lays__img {
-    background: url("../img/lays/newmobile.jpg") no-repeat 50% 50%;
+    background: url("../img/lays/newmobile.jpg") no-repeat center;
     background-size: cover;
     transform: scale(1);
     position: static;
@@ -1212,6 +1236,16 @@ body.no-scroll {
 .map {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.map[animate-halfblock-map-js='active'] .map__one {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.map[animate-halfblock-map-js='active'] .map__two {
+  opacity: 1;
+  transform: translate3d(0,0,0);
 }
 
 .map:hover .map__one .map__img {
@@ -1233,7 +1267,7 @@ body.no-scroll {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url("../img/map/ppl.jpg") no-repeat 50% 50%;
+  background: url("../img/map/ppl.jpg") no-repeat center;
   background-size: cover;
   transition: transform 10s linear;
 }
@@ -1249,7 +1283,7 @@ body.no-scroll {
 
 .map__two {
   height: 46.064vw;
-  background: url("../img/map/map.jpg") no-repeat 50% 50%;
+  background: url("../img/map/map.jpg") no-repeat center;
   background-size: cover;
   transform: translateX(350px);
   opacity: 0;
@@ -1314,7 +1348,7 @@ body.no-scroll {
   .map__two {
     height: 100vw;
     border-top: 3px solid white;
-    background: url("../img/map/mobile__map.png") no-repeat 50% 50%;
+    background: url("../img/map/mobile__map.png") no-repeat center;
     background-size: cover;
     transform: translateX(0px);
     opacity: 1;
@@ -1361,7 +1395,7 @@ body.no-scroll {
   height: 90px;
   background-color: #3c3c3c;
   overflow: hidden;
-  display: block;
+  display: flex;
 }
 
 .footer__logo {
@@ -1371,7 +1405,6 @@ body.no-scroll {
   -moz-background-size: 69px 89px;
   -o-background-size: 69px 89px;
   background-size: 69px 89px;
-  float: left;
   margin-left: 31px;
 }
 
@@ -1387,12 +1420,13 @@ body.no-scroll {
 .footer__links {
   display: flex;
   justify-content: flex-end;
+  margin-left: auto;
 }
 
 .footer__links div.facebook {
   width: 100px;
   height: 90px;
-  background: url("../img/footer/image.jpeg") no-repeat 50% 50%;
+  background: url("../img/footer/image.jpeg") no-repeat center;
   background-size: 52px 49px;
   background-color: #326aa2;
   opacity: 0.85;
@@ -1407,7 +1441,7 @@ body.no-scroll {
 .footer__links div.vk {
   width: 100px;
   height: 90px;
-  background: url("../img/footer/image0.jpeg") no-repeat 50% 50%;
+  background: url("../img/footer/image0.jpeg") no-repeat center;
   background-size: 52px 49px;
   background-color: #3479a8;
   opacity: 0.85;
@@ -1422,7 +1456,7 @@ body.no-scroll {
 .footer__links div.earth {
   width: 100px;
   height: 90px;
-  background: url("../img/footer/image2.jpeg") no-repeat 50% 50%;
+  background: url("../img/footer/image2.jpeg") no-repeat center;
   background-size: 52px 49px;
   background-color: #edbf11;
   opacity: 0.85;
@@ -1437,7 +1471,7 @@ body.no-scroll {
 .footer__links div.youtube {
   width: 100px;
   height: 90px;
-  background: url("../img/footer/image1.jpeg") no-repeat 50% 50%;
+  background: url("../img/footer/image1.jpeg") no-repeat center;
   background-size: 52px 49px;
   background-color: #c4070e;
   opacity: 0.85;
@@ -1485,7 +1519,6 @@ body.no-scroll {
     height: 60px;
     background-image: url("../img/footer/footer.jpg");
     background-size: 50px 60px;
-    float: left;
     margin-left: 27px;
   }
 
@@ -1498,7 +1531,7 @@ body.no-scroll {
   .footer__links div.facebook {
     width: 60px;
     height: 60px;
-    background: url("../img/footer/image.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image.jpeg") no-repeat center;
     background-size: 31px 32px;
     background-color: #326aa2;
   }
@@ -1506,7 +1539,7 @@ body.no-scroll {
   .footer__links div.vk {
     width: 60px;
     height: 60px;
-    background: url("../img/footer/image0.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image0.jpeg") no-repeat center;
     background-size: 31px 32px;
     background-color: #3479a8;
   }
@@ -1514,7 +1547,7 @@ body.no-scroll {
   .footer__links div.earth {
     width: 60px;
     height: 60px;
-    background: url("../img/footer/image2.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image2.jpeg") no-repeat center;
     background-size: 31px 32px;
     background-color: #edbf11;
   }
@@ -1522,7 +1555,7 @@ body.no-scroll {
   .footer__links div.youtube {
     width: 60px;
     height: 60px;
-    background: url("../img/footer/image1.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image1.jpeg") no-repeat center;
     background-size: 31px 32px;
     background-color: #c4070e;
   }
@@ -1538,7 +1571,6 @@ body.no-scroll {
     height: 50px;
     background-image: url("../img/footer/footer.jpg");
     background-size: 100% 100%;
-    float: left;
     margin-left: 17px;
   }
 
@@ -1551,7 +1583,7 @@ body.no-scroll {
   .footer__links div.facebook {
     width: 50px;
     height: 50px;
-    background: url("../img/footer/image.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image.jpeg") no-repeat center;
     background-size: 31px 32px;
     background-color: #326aa2;
   }
@@ -1559,7 +1591,7 @@ body.no-scroll {
   .footer__links div.vk {
     width: 50px;
     height: 50px;
-    background: url("../img/footer/image0.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image0.jpeg") no-repeat center;
     background-size: 31px 32px;
     background-color: #3479a8;
   }
@@ -1567,7 +1599,7 @@ body.no-scroll {
   .footer__links div.earth {
     width: 50px;
     height: 50px;
-    background: url("../img/footer/image2.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image2.jpeg") no-repeat center;
     background-size: 31px 32px;
     background-color: #edbf11;
   }
@@ -1575,7 +1607,7 @@ body.no-scroll {
   .footer__links div.youtube {
     width: 50px;
     height: 50px;
-    background: url("../img/footer/image1.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image1.jpeg") no-repeat center;
     background-size: 31px 32px;
     background-color: #c4070e;
   }
@@ -1604,7 +1636,7 @@ body.no-scroll {
   .footer__links div.facebook {
     width: 46px;
     height: 42px;
-    background: url("../img/footer/image.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image.jpeg") no-repeat center;
     background-size: 52%;
     background-color: #326aa2;
     margin-right: -1px;
@@ -1617,7 +1649,7 @@ body.no-scroll {
   .footer__links div.vk {
     width: 46px;
     height: 42px;
-    background: url("../img/footer/image0.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image0.jpeg") no-repeat center;
     background-size: 52%;
     background-color: #3479a8;
     margin-right: -1px;
@@ -1630,7 +1662,7 @@ body.no-scroll {
   .footer__links div.earth {
     width: 46px;
     height: 42px;
-    background: url("../img/footer/image2.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image2.jpeg") no-repeat center;
     background-size: 52%;
     background-color: #edbf11;
     margin-right: -1px;
@@ -1643,7 +1675,7 @@ body.no-scroll {
   .footer__links div.youtube {
     width: 46px;
     height: 42px;
-    background: url("../img/footer/image1.jpeg") no-repeat 50% 50%;
+    background: url("../img/footer/image1.jpeg") no-repeat center;
     background-size: 52%;
     background-color: #c4070e;
     margin-right: -1px;
