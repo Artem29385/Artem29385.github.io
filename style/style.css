@@ -826,7 +826,6 @@ body.no-scroll {
   }
 
   .h1__blocks .h1__text {
-    margin-left: 0;
     font-size: 44px;
     letter-spacing: 1px;
     color: #d62b2b;
@@ -1234,6 +1233,7 @@ body.no-scroll {
 
 .map {
   display: grid;
+  height: 46.064vw;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -1254,8 +1254,8 @@ body.no-scroll {
 
 .map__one {
   overflow: hidden;
+  height: 100%;
   opacity: 0;
-  height: 46.064vw;
   transition: opacity 1s ease, transform 1s ease;
   transform: translateX(-350px);
 }
@@ -1281,7 +1281,7 @@ body.no-scroll {
 }
 
 .map__two {
-  height: 46.064vw;
+  height: 100%;
   background: url("../img/map/map.jpg") no-repeat center;
   background-size: cover;
   transform: translateX(350px);
@@ -1331,6 +1331,7 @@ body.no-scroll {
   .map {
     display: flex;
     flex-wrap: wrap;
+    height: 200vw;
     flex-direction: column-reverse;
   }
 
