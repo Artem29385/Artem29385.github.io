@@ -654,7 +654,6 @@ body.no-scroll {
 }
 
 .intro__bg {
-  position: relative;
   background-color: white;
   width: 2.75rem;
   height: 2.75rem;
