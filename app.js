@@ -5,6 +5,7 @@ const blockGallery = document.querySelector('[right-animate-js]');
 const blockAbout = document.querySelector('[animate-halfblock-lays-js]');
 const blockMap = document.querySelector('[animate-halfblock-map-js]');
 const header = document.querySelector('[data-js-dir]');
+const close = document.querySelector('[header-btn-close]');
 let heightHeader = header.offsetHeight / 1.1;
 let value = window.pageYOffset;
 let posTop;
