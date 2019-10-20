@@ -8,8 +8,7 @@ const header = document.querySelector('[data-js-dir]');
 const close = document.querySelector('[header-btn-close]');
 let heightHeader = header.offsetHeight / 1.1;
 let value = window.pageYOffset;
-let posTop;
-let flag = false;
+
 
 
 const closeMenu = () => {
@@ -59,6 +58,8 @@ setTimeout(() => {
 
 
 if (document.body.offsetWidth > 640) {
+	let posTop;
+	let flag = false;
   window.addEventListener('scroll',  () => {
        if (!flag) {
          posTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
